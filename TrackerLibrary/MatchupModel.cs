@@ -5,20 +5,20 @@ using System.Text;
 namespace TrackerLibrary
 {
     /// <summary>
-    /// Represents the matchup class of tournament
+    /// Represents one match in the tournament
     /// </summary>
     public class MatchupModel
     {
         /// <summary>
-        /// Represents the matchup entry list of team in the tournament
+        /// The set of teams that were involved in this match
         /// </summary>
         public List<MatchupEntryModel> Entries { get; set; } = new List<MatchupEntryModel>();
         /// <summary>
-        /// Represents the winner between 2 teams
+        /// The winner of the match
         /// </summary>
         public List<TeamModel> Winner { get; set; } = new List<TeamModel>();
         /// <summary>
-        /// Represets the matchup round of the team in the tournament
+        /// Which round this match is a part of.
         /// </summary>
         public int MatchupRound { get; set; }
     }

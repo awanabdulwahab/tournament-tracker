@@ -4,6 +4,9 @@ using System.Text;
 
 namespace TrackerLibrary
 {
+    /// <summary>
+    /// Represents one team in a matchup
+    /// </summary>
     public class MatchupEntryModel
     {
         /// <summary>
@@ -11,7 +14,7 @@ namespace TrackerLibrary
         /// </summary>
         public List<TeamModel> TeamsCompeting { get; set; } = new List<TeamModel>();
         /// <summary>
-        /// Repreats the score for this paticular team
+        /// Repreats the score for this particular team
         /// </summary>
         public double Score { get; set; }
         /// <summary>
