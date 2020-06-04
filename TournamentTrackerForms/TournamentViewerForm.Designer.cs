@@ -202,7 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 50F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(903, 574);
+            this.ClientSize = new System.Drawing.Size(903, 587);
             this.Controls.Add(this.ScoreButton);
             this.Controls.Add(this.versesLabel);
             this.Controls.Add(this.ScoreTeamTwoText);
@@ -220,6 +220,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.Name = "TournamentViewerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tournament Viewer";
             this.ResumeLayout(false);
             this.PerformLayout();
