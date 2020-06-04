@@ -8,3 +8,4 @@ D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms
 D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\obj\Debug\TrackerUI.csproj.CoreCompileInputs.cache
 D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\obj\Debug\TournamentTrackerForms.exe
 D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\obj\Debug\TournamentTrackerForms.pdb
+D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\obj\Debug\TournamentTrackerForms.CreateTournamentForm.resources
