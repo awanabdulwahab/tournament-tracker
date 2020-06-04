@@ -16,7 +16,7 @@ namespace TournamentTrackerForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CreateTournamentForm());
+            Application.Run(new CreateTeamForm());
         }
     }
 }
