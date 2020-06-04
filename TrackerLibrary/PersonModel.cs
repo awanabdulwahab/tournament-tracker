@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TrackerLibrary
 {
-    class PersonModel
+    public class PersonModel
     {
         public string FirstName { get; set; }
 
