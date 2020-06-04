@@ -95,6 +95,7 @@
             this.addMemberButton.TabIndex = 19;
             this.addMemberButton.Text = "Add Member";
             this.addMemberButton.UseVisualStyleBackColor = true;
+            this.addMemberButton.Click += new System.EventHandler(this.addMemberButton_Click);
             // 
             // selectTeamMemberDropDown
             // 
@@ -105,6 +106,7 @@
             this.selectTeamMemberDropDown.Name = "selectTeamMemberDropDown";
             this.selectTeamMemberDropDown.Size = new System.Drawing.Size(371, 33);
             this.selectTeamMemberDropDown.TabIndex = 18;
+            this.selectTeamMemberDropDown.SelectedIndexChanged += new System.EventHandler(this.selectTeamMemberDropDown_SelectedIndexChanged);
             // 
             // selectTeamMemberLabel
             // 
@@ -116,6 +118,7 @@
             this.selectTeamMemberLabel.Size = new System.Drawing.Size(187, 25);
             this.selectTeamMemberLabel.TabIndex = 17;
             this.selectTeamMemberLabel.Text = "Select Team Member";
+            this.selectTeamMemberLabel.Click += new System.EventHandler(this.selectTeamMemberLabel_Click);
             // 
             // AddNewMemberGroup
             // 
@@ -291,6 +294,7 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Team ";
+            this.Load += new System.EventHandler(this.CreateTeamForm_Load);
             this.AddNewMemberGroup.ResumeLayout(false);
             this.AddNewMemberGroup.PerformLayout();
             this.ResumeLayout(false);

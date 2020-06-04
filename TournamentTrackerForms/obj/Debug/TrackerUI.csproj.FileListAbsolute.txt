@@ -11,3 +11,4 @@ D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms
 D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\obj\Debug\TournamentTrackerForms.CreateTournamentForm.resources
 D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\obj\Debug\TournamentTrackerForms.CreateTeamForm.resources
 D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\obj\Debug\TournamentTrackerForms.CreatePrizeForm.resources
+D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\obj\Debug\TournamentTrackerForms.TournamentDashboardForm.resources
