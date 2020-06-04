@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "faiUae+vEf9t1V0A+IQICyUEhJxTFtUYh7VjJZIlllS2CBlYWZUUY4YZl7DbCOvZ01c0mT0le3s5MdgGiG2fpw==",
+  "success": true,
+  "projectFilePath": "D:\\UET\\Summer\\Windows Form Application\\tournament tracker\\TrackerLibrary\\TrackerLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Abdul Wahab Awan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Abdul Wahab Awan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
