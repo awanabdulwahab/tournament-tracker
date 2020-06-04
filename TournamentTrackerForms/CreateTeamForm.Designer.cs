@@ -72,12 +72,12 @@
             // CreateTeamLabel
             // 
             this.CreateTeamLabel.AutoSize = true;
-            this.CreateTeamLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateTeamLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateTeamLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.CreateTeamLabel.Location = new System.Drawing.Point(14, 9);
             this.CreateTeamLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.CreateTeamLabel.Name = "CreateTeamLabel";
-            this.CreateTeamLabel.Size = new System.Drawing.Size(116, 25);
+            this.CreateTeamLabel.Size = new System.Drawing.Size(155, 32);
             this.CreateTeamLabel.TabIndex = 11;
             this.CreateTeamLabel.Text = "Create Team";
             // 
@@ -129,7 +129,7 @@
             this.AddNewMemberGroup.Controls.Add(this.firstNameValue);
             this.AddNewMemberGroup.Controls.Add(this.firstNameLabel);
             this.AddNewMemberGroup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddNewMemberGroup.Location = new System.Drawing.Point(23, 320);
+            this.AddNewMemberGroup.Location = new System.Drawing.Point(23, 305);
             this.AddNewMemberGroup.Name = "AddNewMemberGroup";
             this.AddNewMemberGroup.Size = new System.Drawing.Size(371, 337);
             this.AddNewMemberGroup.TabIndex = 20;
@@ -274,7 +274,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(998, 749);
+            this.ClientSize = new System.Drawing.Size(998, 721);
             this.Controls.Add(this.createTeamtButton);
             this.Controls.Add(this.deleteSelectedTeamMemberButton);
             this.Controls.Add(this.TeamMemberListBox);
