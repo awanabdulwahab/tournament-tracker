@@ -4,8 +4,18 @@ using System.Text;
 
 namespace TrackerLibrary
 {
+    /// <summary>
+    /// Interface to setup a contract with different classes to store data
+    /// </summary>
     public interface IDataConnection
     {
+        /// <summary>
+        /// This method takes a prizemodel object
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>
+        /// The updated prize model
+        /// </returns>
         PrizeModel CreatePrize(PrizeModel model);
     }
 }

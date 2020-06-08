@@ -4,8 +4,15 @@ using System.Text;
 
 namespace TrackerLibrary
 {
+    /// <summary>
+    /// Represents what the prize is for the given place.
+    /// </summary>
     public class PrizeModel
     {
+        /// <summary>
+        /// The unique identifer for the prize
+        /// </summary>
+        public int id { get; set; }
         /// <summary>
         /// Represents the place number team got when playing
         /// </summary>

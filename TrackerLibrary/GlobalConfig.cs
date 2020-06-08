@@ -27,11 +27,11 @@ namespace TrackerLibrary
         {
             if (database)
             {
-                // do something
+                // TODO - Create the SQL Connection
             }
             if (textFiles)
             {
-                // do something
+                // TODO - Create the Text Connection
             }
         }
     }
