@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerLibrary;
 
 namespace TournamentTrackerForms
 {
@@ -19,7 +20,14 @@ namespace TournamentTrackerForms
 
         private void createPrizeButton_Click(object sender, EventArgs e)
         {
+            if (validateForm())
+            {
+                PrizeModel model = new PrizeModel(placeNameValue.Text,
+                    placeNumberValue.Text, 
+                    prizeAmountValue.Text, 
+                    prizePercentageValue.Text);
 
+            }
         }
         /// <summary>
         /// Validate the form create Prize 
@@ -47,10 +55,10 @@ namespace TournamentTrackerForms
             }
 
             decimal prizeamount = 0;
-            int prizepercentage = 0;
+            double prizepercentage = 0;
 
             bool prizeAmountValid = decimal.TryParse(prizeAmountValue.Text, out prizeamount);
-            bool prizepercentageValid = int.TryParse(prizePercentageValue.Text, out prizepercentage);
+            bool prizepercentageValid = double.TryParse(prizePercentageValue.Text, out prizepercentage);
             if (prizeAmountValid == false || prizepercentageValid == false)
             {
                 output = false;

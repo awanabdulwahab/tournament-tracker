@@ -29,5 +29,31 @@ namespace TrackerLibrary
         /// Represents the prize percentage of that team in the tournament
         /// </summary>
         public double PrizePercentage { get; set; }
+        /// <summary>
+        /// Empty consturctor to do nothing
+        /// </summary>
+        public PrizeModel()
+        {
+
+        }
+        /// <summary>
+        /// Overloaded contructor of PrizeModel Class
+        /// </summary>
+        public PrizeModel(string placename,string prizeNumber, string prizeAmount, string prizePercentage)
+        {
+            PlaceName = placename;
+
+            int placeNumberValue = 0;
+            int.TryParse(placename, out placeNumberValue);
+            PlaceNumber = placeNumberValue;
+
+            decimal prizeAmountValue = 0;
+            decimal.TryParse(prizeAmount, out prizeAmountValue);
+            PrizeAmount = prizeAmountValue;
+
+            double prizePercentageValue = 0;
+            double.TryParse(prizePercentage, out prizePercentageValue);
+            PrizePercentage = prizePercentageValue;
+        }
     }
 }
