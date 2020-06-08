@@ -1,0 +1,6 @@
+D:\UET\Summer\Windows Form Application\tournament tracker\TrackerClassLibrary\bin\Debug\TrackerClassLibrary.dll
+D:\UET\Summer\Windows Form Application\tournament tracker\TrackerClassLibrary\bin\Debug\TrackerClassLibrary.pdb
+D:\UET\Summer\Windows Form Application\tournament tracker\TrackerClassLibrary\obj\Debug\TrackerClassLibrary.csprojAssemblyReference.cache
+D:\UET\Summer\Windows Form Application\tournament tracker\TrackerClassLibrary\obj\Debug\TrackerClassLibrary.csproj.CoreCompileInputs.cache
+D:\UET\Summer\Windows Form Application\tournament tracker\TrackerClassLibrary\obj\Debug\TrackerClassLibrary.dll
+D:\UET\Summer\Windows Form Application\tournament tracker\TrackerClassLibrary\obj\Debug\TrackerClassLibrary.pdb
