@@ -13,7 +13,7 @@ namespace TrackerLibrary
         /// This list of data connection is used to save the data in both text file or sql server at the same time
         /// </summary>
 
-        public static List<IDataConnection> Connections { get; private set; }
+        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
         /// <summary>
         /// At the begining of applicaiton, these are the connections I want to setup 
         /// </summary>
@@ -27,11 +27,15 @@ namespace TrackerLibrary
         {
             if (database)
             {
-                // TODO - Create the SQL Connection
+                // TODO - Set up the SQL Connector Properly
+                SQLConnector sql = new SQLConnector();
+                Connections.Add(sql); 
             }
             if (textFiles)
             {
-                // TODO - Create the Text Connection
+                // TODO - Set up the Text Connector Properly
+                TextConnector text = new TextConnector();
+                Connections.Add(text);
             }
         }
     }
