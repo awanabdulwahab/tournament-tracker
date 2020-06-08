@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TrackerLibrary.Models;
 
-namespace TrackerLibrary
+namespace TrackerLibrary.DataAccess
 {
     /// <summary>
     /// This class implements the IDataConneciton interface
     /// </summary>
-    public class SQLConnector : IDataConnection
+    public class TextConnector : IDataConnection
     {
-        // TODO - Make th CreatePrize method actually save to the database
+        // TODO - Make th CreatePrize method actually save to the textfile
         /// <summary>
-        /// Saves the ne prize to the database
+        /// Saves the new prize to the text
         /// </summary>
         /// <param name="model">The prize information</param>
         /// <returns>The prize information, including unique indentifier.</returns>
