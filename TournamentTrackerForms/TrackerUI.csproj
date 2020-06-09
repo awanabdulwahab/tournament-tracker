@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -116,9 +117,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TrackerClassLibrary\TrackerClassLibrary.csproj">
+    <ProjectReference Include="..\TrackerClassLibrary\TrackerLibrary.csproj">
       <Project>{151c9631-fd28-439b-ac7d-9f34fdad3d61}</Project>
-      <Name>TrackerClassLibrary</Name>
+      <Name>TrackerLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

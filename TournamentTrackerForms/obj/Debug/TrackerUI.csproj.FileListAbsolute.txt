@@ -15,3 +15,5 @@ D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms
 D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\obj\Debug\TrackerUI.csproj.CopyComplete
 D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\bin\Debug\TrackerClassLibrary.dll
 D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\bin\Debug\TrackerClassLibrary.pdb
+D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\bin\Debug\Dapper.dll
+D:\UET\Summer\Windows Form Application\tournament tracker\TournamentTrackerForms\bin\Debug\Dapper.xml

@@ -24,8 +24,8 @@ namespace TournamentTrackerForms
         {
             if (validateForm())
             {
-                PrizeModel model = new PrizeModel(placeNameValue.Text,
-                    placeNumberValue.Text, 
+                PrizeModel model = new PrizeModel(placeNumberValue.Text,
+                    placeNameValue.Text, 
                     prizeAmountValue.Text, 
                     prizePercentageValue.Text);
 
@@ -33,6 +33,10 @@ namespace TournamentTrackerForms
                 {
                     db.CreatePrize(model);
                 }
+                placeNameValue.Text = "";
+                placeNumberValue.Text = "";
+                prizeAmountValue.Text = "";
+                prizePercentageValue.Text = "";
 
             }
         }
@@ -46,7 +50,7 @@ namespace TournamentTrackerForms
         {
             bool output = true;
             int placenumber = 0;
-            bool placeNumberValidNumber = int.TryParse(placeNameValue.Text, out placenumber);
+            bool placeNumberValidNumber = int.TryParse(placeNumberValue.Text, out placenumber);
             if (placeNumberValidNumber == false)
             {
                 output = false;
@@ -66,7 +70,7 @@ namespace TournamentTrackerForms
 
             bool prizeAmountValid = decimal.TryParse(prizeAmountValue.Text, out prizeamount);
             bool prizepercentageValid = double.TryParse(prizePercentageValue.Text, out prizepercentage);
-            if (prizeAmountValid == false || prizepercentageValid == false)
+            if (prizeAmountValid == false && prizepercentageValid == false)
             {
                 output = false;
             }
@@ -79,6 +83,11 @@ namespace TournamentTrackerForms
                 output = false;
             }
             return output;
+        }
+
+        private void CreatePrizeForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

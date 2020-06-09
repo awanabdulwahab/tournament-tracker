@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
+using System.Net.Configuration;
+using System.Net.Http.Headers;
 using System.Text;
 using TrackerLibrary.Models;
 
@@ -19,19 +23,22 @@ namespace TrackerLibrary.DataAccess
         /// <returns>The prize information, including unique indentifier.</returns>
         public PrizeModel CreatePrize(PrizeModel model)
         {
-            model.id = 1;
-            return model;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
+            {
+                var p = new DynamicParameters();
+                p.Add("@PlaceNumber", model.PlaceNumber);
+                p.Add("@PlaceName", model.PlaceName);
+                p.Add("@PrizeAmount", model.PrizeAmount);
+                p.Add("@PrizePercentage", model.PrizePercentage);
+                p.Add("@id", 0, dbType: DbType.Int32,direction: ParameterDirection.Output);
+
+                connection.Execute("dbo.spPrizes_insert",p , commandType:CommandType.StoredProcedure);
+
+                model.id = p.Get<int>("@id");
+
+                return model;
+            }
         }
-        /// <summary>
-        /// This function goes to App.config file 
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns>
-        /// Return the connection string form App.config file
-        /// </returns>
-        public static string CnnString(string name)
-        {
-            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
-        }
+        
     }
 }

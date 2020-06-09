@@ -39,12 +39,12 @@ namespace TrackerLibrary.Models
         /// <summary>
         /// Overloaded contructor of PrizeModel Class
         /// </summary>
-        public PrizeModel(string placename,string prizeNumber, string prizeAmount, string prizePercentage)
+        public PrizeModel(string placeNumber, string placename, string prizeAmount, string prizePercentage)
         {
             PlaceName = placename;
 
             int placeNumberValue = 0;
-            int.TryParse(placename, out placeNumberValue);
+            int.TryParse(placeNumber, out placeNumberValue);
             PlaceNumber = placeNumberValue;
 
             decimal prizeAmountValue = 0;
