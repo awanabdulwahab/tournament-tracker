@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Text;
 using TrackerLibrary.Models;
 
@@ -20,6 +21,17 @@ namespace TrackerLibrary.DataAccess
         {
             model.id = 1;
             return model;
+        }
+        /// <summary>
+        /// This function goes to App.config file 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns>
+        /// Return the connection string form App.config file
+        /// </returns>
+        public static string CnnString(string name)
+        {
+            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
     }
 }
