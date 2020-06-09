@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Text;
+using TrackerClassLibrary;
 using TrackerLibrary.DataAccess;
 
 namespace TrackerLibrary
@@ -15,7 +16,7 @@ namespace TrackerLibrary
         /// This list of data connection is used to save the data in both text file or sql server at the same time
         /// </summary>
 
-        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
+        public static IDataConnection Connection { get; private set; }
         /// <summary>
         /// At the begining of applicaiton, these are the connections I want to setup 
         /// </summary>
@@ -25,19 +26,19 @@ namespace TrackerLibrary
         /// <param name="textFiles">
         /// Do you want the text file
         /// </param>
-        public static void InitializeConnection(bool database, bool textFiles)
+        public static void InitializeConnection(DatabaseType db)
         {
-            if (database)
+            if (db == DatabaseType.Sql )
             {
                 // TODO - Set up the SQL Connector Properly
                 SQLConnector sql = new SQLConnector();
-                Connections.Add(sql); 
+                Connection = sql; 
             }
-            if (textFiles)
+            else if (db == DatabaseType.TextFile)
             {
                 // TODO - Set up the Text Connector Properly
                 TextConnector text = new TextConnector();
-                Connections.Add(text);
+                Connection = text;
             }
         }
         /// <summary>
