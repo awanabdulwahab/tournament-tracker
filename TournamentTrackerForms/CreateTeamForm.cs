@@ -67,7 +67,10 @@ namespace TournamentTrackerForms
                 p.EmailAddress = memberEmailValue.Text;
                 p.CellphoneNumber = cellPhoneValue.Text;
 
-                GlobalConfig.Connection.CreatePerson(p);
+                p= GlobalConfig.Connection.CreatePerson(p);
+                selectedTeamMembers.Add(p);
+                WireupList();
+
                 firstNameValue.Text = "";
                 lastNameValue.Text = "";
                 memberEmailValue.Text = "";
