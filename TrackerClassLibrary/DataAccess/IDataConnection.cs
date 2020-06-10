@@ -18,5 +18,13 @@ namespace TrackerLibrary.DataAccess
         /// The updated prize model
         /// </returns>
         PrizeModel CreatePrize(PrizeModel model);
+        /// <summary>
+        /// This method takes a PersonModel
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>
+        /// The Updated Person Model
+        /// </returns>
+        PersonModel CreatePerson(PersonModel model);
     }
 }

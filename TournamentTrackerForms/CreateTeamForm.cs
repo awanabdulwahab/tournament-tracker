@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerLibrary;
+using TrackerLibrary.Models;
 
 namespace TournamentTrackerForms
 {
@@ -40,6 +42,51 @@ namespace TournamentTrackerForms
         private void addMemberButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void createMemberButton_Click(object sender, EventArgs e)
+        {
+            if (validateForm())
+            {
+                PersonModel p = new PersonModel();
+                p.FirstName = firstNameValue.Text;
+                p.LastName = lastNameValue.Text;
+                p.EmailAddress = memberEmailValue.Text;
+                p.CellphoneNumber = cellPhoneValue.Text;
+
+                GlobalConfig.Connection.CreatePerson(p);
+                firstNameValue.Text = "";
+                lastNameValue.Text = "";
+                memberEmailValue.Text = "";
+                cellPhoneValue.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Please Enter all fields ","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+        }
+
+        private bool validateForm()
+        {
+            if (firstNameValue.Text.Length ==0)
+            {
+                return false;
+            } 
+            if (lastNameValue.Text.Length ==0)
+            {
+                return false;
+            } 
+            if (memberEmailValue.Text.Length ==0)
+            {
+                return false;
+            }
+            if (cellPhoneValue.Text.Length ==0)
+            {
+                return false;
+            }
+            return true;
+            
         }
     }
 }
