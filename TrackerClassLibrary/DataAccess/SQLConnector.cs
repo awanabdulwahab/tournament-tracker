@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Linq;
 using System.Net.Configuration;
 using System.Net.Http.Headers;
 using System.Text;
@@ -15,6 +16,7 @@ namespace TrackerLibrary.DataAccess
     /// </summary>
     public class SQLConnector : IDataConnection
     {
+        private const string db = "Tournaments";
         // TODO - Make th CreatePrize method actually save to the database
         /// <summary>
         /// Saves the ne prize to the database
@@ -23,7 +25,7 @@ namespace TrackerLibrary.DataAccess
         /// <returns>The prize information, including unique indentifier.</returns>
         public PrizeModel CreatePrize(PrizeModel model)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
                 var p = new DynamicParameters();
                 p.Add("@PlaceNumber", model.PlaceNumber);
@@ -42,7 +44,7 @@ namespace TrackerLibrary.DataAccess
 
         PersonModel IDataConnection.CreatePerson(PersonModel model)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("Tournaments")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
                 var p = new DynamicParameters();
                 p.Add("@FirstName", model.FirstName);
@@ -57,6 +59,16 @@ namespace TrackerLibrary.DataAccess
 
                 return model;
             }
+        }
+
+        public List<PersonModel> GetPerson_All()
+        {
+            List<PersonModel> output;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                output = connection.Query<PersonModel>("dbo.spPeople_GetAll").ToList();                
+            }
+            return output;
         }
     }
 }

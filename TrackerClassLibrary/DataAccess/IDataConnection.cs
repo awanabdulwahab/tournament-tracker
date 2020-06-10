@@ -26,5 +26,7 @@ namespace TrackerLibrary.DataAccess
         /// The Updated Person Model
         /// </returns>
         PersonModel CreatePerson(PersonModel model);
+
+        List<PersonModel> GetPerson_All();
     }
 }

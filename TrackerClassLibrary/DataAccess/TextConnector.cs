@@ -68,5 +68,10 @@ namespace TrackerLibrary.DataAccess
             // Save the list<string> to the text file
         }
 
+        public List<PersonModel> GetPerson_All()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

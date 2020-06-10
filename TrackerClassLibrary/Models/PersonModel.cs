@@ -30,5 +30,15 @@ namespace TrackerLibrary.Models
         /// Represents the cell phone of a single Team Member 
         /// </summary>
         public string CellphoneNumber { get; set; }
+        /// <summary>
+        /// Represents the fulll name of person to show in dropdownlist
+        /// </summary>
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} { LastName }";
+            }
+        }
     }
 }

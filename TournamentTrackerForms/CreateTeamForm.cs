@@ -14,9 +14,13 @@ namespace TournamentTrackerForms
 {
     public partial class CreateTeamForm : Form
     {
+        private List<PersonModel> availableTeamMembers= GlobalConfig.Connection.GetPerson_All();
+        private List<PersonModel> selectedTeamMembers = new List<PersonModel>();
         public CreateTeamForm()
         {
             InitializeComponent();
+            //CreateSampleData();
+            WireupList();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -27,7 +31,7 @@ namespace TournamentTrackerForms
         private void CreateTeamForm_Load(object sender, EventArgs e)
         {
 
-        }
+        } 
 
         private void selectTeamMemberLabel_Click(object sender, EventArgs e)
         {
@@ -41,7 +45,16 @@ namespace TournamentTrackerForms
 
         private void addMemberButton_Click(object sender, EventArgs e)
         {
+            PersonModel p = (PersonModel)selectTeamMemberDropDown.SelectedItem;
 
+            if (p != null)
+            {
+                availableTeamMembers.Remove(p);
+                selectedTeamMembers.Add(p);
+
+                WireupList();
+
+            }
         }
 
         private void createMemberButton_Click(object sender, EventArgs e)
@@ -87,6 +100,42 @@ namespace TournamentTrackerForms
             }
             return true;
             
+        }
+
+        private void WireupList()
+        {
+            selectTeamMemberDropDown.DataSource = null;
+            selectTeamMemberDropDown.DataSource = availableTeamMembers;
+            selectTeamMemberDropDown.DisplayMember = "FullName";
+
+            TeamMemberListBox.DataSource = null;
+            TeamMemberListBox.DataSource = selectedTeamMembers;
+            TeamMemberListBox.DisplayMember = "FullName";
+
+        }
+
+        private void CreateSampleData()
+        {
+            availableTeamMembers.Add(new PersonModel {FirstName ="Tim",LastName= "Corey" });
+            availableTeamMembers.Add(new PersonModel {FirstName ="Sam",LastName= "Storey" });
+
+            selectedTeamMembers.Add(new PersonModel {FirstName ="Tim",LastName= "Corey" });
+            selectedTeamMembers.Add(new PersonModel {FirstName ="Sam",LastName= "Storey" });
+
+            
+        }
+
+        private void removeSelectedTeamMemberButton_Click(object sender, EventArgs e)
+        {
+            PersonModel p = (PersonModel)TeamMemberListBox.SelectedItem;
+            if (p != null)
+            {
+                selectedTeamMembers.Remove(p);
+                availableTeamMembers.Add(p);
+
+                WireupList();
+            }
+        
         }
     }
 }
