@@ -85,6 +85,7 @@ namespace TournamentTrackerForms
 
         private bool validateForm()
         {
+            // TODO - Validate this form Correctly
             if (firstNameValue.Text.Length ==0)
             {
                 return false;
@@ -139,6 +140,18 @@ namespace TournamentTrackerForms
                 WireupList();
             }
         
+        }
+
+        private void createTeamtButton_Click(object sender, EventArgs e)
+        {
+            TeamModel t = new TeamModel();
+
+            t.TeamName = TeamNameValue.Text;
+            t.TeamMembers = selectedTeamMembers;
+
+            t = GlobalConfig.Connection.CreateTeam(t);
+
+            // TODO- Reset the form
         }
     }
 }

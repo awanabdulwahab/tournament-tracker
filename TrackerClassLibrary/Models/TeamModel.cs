@@ -6,6 +6,7 @@ namespace TrackerLibrary.Models
 {
     public class TeamModel
     {
+        public int id { get; set; }
         /// <summary>
         /// Repesents the team member of team in tournament
         /// </summary>

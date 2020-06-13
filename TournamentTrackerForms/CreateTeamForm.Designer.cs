@@ -273,6 +273,7 @@
             this.createTeamtButton.TabIndex = 26;
             this.createTeamtButton.Text = "Create Team";
             this.createTeamtButton.UseVisualStyleBackColor = true;
+            this.createTeamtButton.Click += new System.EventHandler(this.createTeamtButton_Click);
             // 
             // CreateTeamForm
             // 
