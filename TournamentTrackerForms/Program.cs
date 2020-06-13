@@ -18,8 +18,8 @@ namespace TournamentTrackerForms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // Initialize the database connections
-            TrackerLibrary.GlobalConfig.InitializeConnection(DatabaseType.TextFile);
-            Application.Run(new CreateTeamForm());
+            TrackerLibrary.GlobalConfig.InitializeConnection(DatabaseType.Sql);
+            Application.Run(new CreateTournamentForm());
 
            // Application.Run(new TournamentDashboardForm());
         }
