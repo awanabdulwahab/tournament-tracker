@@ -16,9 +16,11 @@ namespace TournamentTrackerForms
     {
         private List<PersonModel> availableTeamMembers= GlobalConfig.Connection.GetPerson_All();
         private List<PersonModel> selectedTeamMembers = new List<PersonModel>();
-        public CreateTeamForm()
+        private ITeamRequestor callingform;
+        public CreateTeamForm(ITeamRequestor caller)
         {
             InitializeComponent();
+            callingform = caller;
             //CreateSampleData();
             WireupList();
         }
@@ -149,9 +151,10 @@ namespace TournamentTrackerForms
             t.TeamName = TeamNameValue.Text;
             t.TeamMembers = selectedTeamMembers;
 
-            t = GlobalConfig.Connection.CreateTeam(t);
+            GlobalConfig.Connection.CreateTeam(t);
 
-            // TODO- Reset the form
+            callingform.TeamComplete(t);
+            this.Close();
         }
     }
 }
