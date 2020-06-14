@@ -15,6 +15,7 @@ namespace TrackerLibrary.DataAccess
         private const string prizesFile = "PrizeModel.csv";
         private const string peopleFile = "PersonModel.csv";
         private const string teamFile = "TeamModel.csv";
+        private const string tournamentFile = "TournamentModels.csv";
         // TODO - Make th CreatePrize method actually save to the textfile
         /// <summary>
         /// Saves the new prize to the text
@@ -96,6 +97,11 @@ namespace TrackerLibrary.DataAccess
         public List<TeamModel> GetTeams_All()
         {
             return teamFile.FullFilePath().LoadFile().ConvertToTeamModels(peopleFile);
+        }
+
+        public TournamentModel CreateTournament(TournamentModel model)
+        {
+            List<TournamentModel> tournaments = tournamentFile.FullFilePath().LoadFile().ConvertToTournamentModel();
         }
     }
 }

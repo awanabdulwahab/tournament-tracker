@@ -6,6 +6,7 @@ namespace TrackerLibrary.Models
 {
     public class TournamentModel
     {
+        public int id { get; set; }
         public string TournamentName { get; set; }
 
         public decimal EntryFee { get; set; }

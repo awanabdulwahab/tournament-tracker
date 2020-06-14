@@ -103,6 +103,11 @@ namespace TrackerClassLibrary.DataAccess.TextConnector
 
         }
 
+        public static List<TournamentModel> ConvertToTournamentModel(this List<string> lines)
+        {
+
+        }
+
         public static void SaveToPrizeFile(this List<PrizeModel> models, string fileName)
         {
             List<string> lines = new List<string>();
