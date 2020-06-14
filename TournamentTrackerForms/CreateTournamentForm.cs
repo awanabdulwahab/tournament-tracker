@@ -12,7 +12,7 @@ using TrackerLibrary.Models;
 
 namespace TournamentTrackerForms
 {
-    public partial class CreateTournamentForm : Form
+    public partial class CreateTournamentForm : Form,IPrizeRequestor
     {
         List<TeamModel> availablTeams = GlobalConfig.Connection.GetTeams_All();
         List<TeamModel> selectedTeams = new List<TeamModel>();
@@ -47,6 +47,22 @@ namespace TournamentTrackerForms
 
                 Wireup();
             }
+        }
+
+        private void createPrizeButton_Click(object sender, EventArgs e)
+        {
+            // Call the create prize form
+            CreatePrizeForm frm = new CreatePrizeForm(this);
+            frm.Show();
+            
+        }
+
+        public void PrizeComplete(PrizeModel model)
+        {
+            // Get back from the form PrizeModel
+            // Take back the prizeModel and put back it in the selected list
+            selectedPrize.Add(model);
+            Wireup();
         }
     }
 }
